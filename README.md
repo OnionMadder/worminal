@@ -1,8 +1,6 @@
  🪱 The Worminal
 
-> A handcrafted haunted terminal built with vanilla JavaScript.  
-> Modular input parsing. Dynamic worm NPCs. Escalating emotional recursion.  
-> Also: he still owes me $500.
+A handcrafted haunted terminal built with vanilla JavaScript. Modular input parsing. Dynamic worm NPCs. Escalating emotional recursion.  
 
 
 What is this?
@@ -15,8 +13,8 @@ The Worminal is an experimental praise terminal where wormlings like Wormy, Squi
 - 🔥 Heat and disobedience mechanics
 - 🐛 NPC worm memory + jealousy tracking
 
-All built with pure HTML, CSS, and JavaScript.  
-No frameworks. No libraries. Just love, spite, and worms.
+All built in HTML, CSS, and JavaScript.  
+No frameworks. No libraries. Just love, spite, and me.
 
 
 Play it live
