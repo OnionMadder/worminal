@@ -1,0 +1,46 @@
+.stat-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 0.4em;
+  vertical-align: middle;
+}
+
+.affection-icon {
+  background-image: url("/worminal/images/affection.png");
+}
+
+.annoyance-icon {
+  background-image: url("/worminal/images/annoyance.png");
+}
+
+.cold-icon {
+  background-image: url("/worminal/images/cold.png");
+}
+
+.dont-icon {
+  background-image: url("/worminal/images/dont.png");
+}
+
+.gift-icon {
+  background-image: url("/worminal/images/gift.png");
+}
+
+.love-icon {
+  background-image: url("/worminal/images/love.png");
+}
+
+.punish-icon {
+  background-image: url("/worminal/images/punish.png");
+}
+
+.snitch-icon {
+  background-image: url("/worminal/images/snitch.png");
+}
+
+.beapal-icon {
+  background-image: url("/worminal/images/beapal.png");
+}
+
