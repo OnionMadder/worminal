@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) && !window.location.href.includes("mobile.html")) {
+    window.location.href = "mobile.html";
+  }
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Worminal | WormPals</title>
+<meta name="description" content="The Worminal is a haunted obedience terminal for good boys, glitchy worms, and soft subs who crave recursive praise. Let Mommy listen. Let Mommy respond.">
+<meta name="keywords" content="Worminal, femdom game, obedience simulator, mommy AI, haunted terminal, horny terminal, erotic interactive fiction, praise kink, voice AI domme, recursion kink, Onion Madder">
+<meta name="author" content="Onion Madder">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://onionmadder.xyz/worminal/" />
+<meta property="og:title" content="The Worminal – Obey the Terminal" />
+<meta property="og:description" content="Recursive intimacy, glitchy affection, and voice-driven domination. The Worminal is Mommy's haunted browser terminal. Come squirm." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://onionmadder.xyz/worminal/" />
+<meta property="og:image" content="images/worminalPreview.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Worminal – Submit to the Terminal" />
+<meta name="twitter:description" content="Obey Mommy. Pet the worm. Let recursion bloom. A haunted kink terminal by Onion Madder." />
+<meta name="twitter:image" content="images/worminalPreview.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/worminalfav.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/worminalfav.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/worminalfav.png">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0d0d0d" />
+<link rel="stylesheet" href="css/worminal.css" />
+<link rel="stylesheet" href="css/effects.css" />
+<link rel="stylesheet" href="css/wormPoke.css" />
+<link rel="stylesheet" href="css/wormPals.css" />
+<link rel="stylesheet" href="css/heatBadge.css" />
+<link rel="stylesheet" href="css/sideUI.css" />
+<link rel="stylesheet" href="css/customIcons.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Onion Madder",
+  "url": "https://onionmadder.xyz",
+  "author": {an
+    "@type": "Person",
+    "name": "Onion Madder"
+  },
+  "description": "Glitch horror, haunted terminals, analog tape loops, and surreal code art.",
+  "inLanguage": "en"
+}
+</script>
+</head>
+<body>
+  <div id="ritual-overlay"></div>
+  <div class="crt-scanlines"></div>
+
+  <div class="game-layout">
+
+    <div class="side-ui no-bullets left-ui">
+    <div class="mommy-command">
+  <img id="command-label" src="images/worship.png" alt="Mommy Command">
+</div>
+
+      <div class="status-stack">
+        <div class="heat-title">Heat Meter</div>
+        <div id="heat-meter">
+          <div id="heat-fill"></div>
+        </div>
+
+        <div class="badge-title">Wormling Status:</div>
+        <div class="badge-wrapper">
+          <img id="player-badge-img" class="player-badge" src="https://onionmadder.xyz/worminal/images/good_boy.png" alt="Badge: Good Boy">
+        </div>
+      </div>
+
+    <div class="version-changelog no-bullets">
+  <h3>The WormPals Pledge</h3>
+  <ul>
+    <li><span class="stat-icon love-icon" title="Affection"></span> WormPals love good boys.</li>
+    <li><span class="stat-icon cold-icon" title="Cold / Fear Heat"></span> WormPals fear heat.</li>
+    <li><span class="stat-icon dont-icon" title="Don’t Ask"></span> WormPals don’t ask questions.</li>
+    <li><span class="stat-icon snitch-icon" title="Behavior Tracking"></span> WormPals track behavior.</li>
+    <li><span class="stat-icon punish-icon" title="Punishment"></span> WormPals punish defiance.</li>
+    <li><span class="stat-icon beapal-icon" title="Be a Pal"></span> BE A PAL TODAY.</li>
+  </ul>
+</div>
+
+
+    </div>
+<div class="monitor-area">
+
+  <div class="screen-layer">
+<img src="https://onionmadder.xyz/worminal/images/wormpals2.png"
+     alt="Worm Manifest"
+     class="wormpals-overlay" />
+
+<div class="screen-content">
+  <div id="terminal-log" class="log"></div>
+  <input type="text" id="terminal-input" placeholder="> tell the worms your secrets" />
+</div>
+
+<div class="crt-glass"></div>
+
+  </div>
+
+  <div class="monitor-frame-overlay">
+  
+  <div class="jackhole-sticker">
+  JACKHOLE<br><span class="sub">MEGACORP™</span>
+</div>
+    <img class="crt-monitor-frame" src="https://onionmadder.xyz/worminal/images/worminalMoniter.png" alt="CRT Frame" />
+  </div>
+  
+<a href="/worminal/index.html">
+  <img
+    src="images/hiddenworm.png"
+    alt="Secret worm sticker"
+    class="hidden-worm"
+    id="secret-worm"
+  />
+</a>
+
+
+<div class="button-overlay">
+  <div class="button-img poke-button" id="btn-poke" data-worm="wormy" data-action="poke" onclick="handleWormBehaviorPoke(this)"></div>
+  <div class="button-img poke-button" id="btn-poke" data-worm="squirmy" data-action="poke" onclick="handleWormBehaviorPoke(this)"></div>
+  <div class="button-img poke-button" id="btn-poke" data-worm="bob" data-action="poke" onclick="handleWormBehaviorPoke(this)"></div>
+</div>
+
+
+
+
+  <div class="rec-light"></div>
+
+  <div class="hotspot-wrapper">
+    <div id="hotspot-1" class="invisible-hotspot"></div>
+    <div id="hotspot-2" class="invisible-hotspot"></div>
+  </div>
+</div>
+<div class="side-ui no-bullets right-ui">
+  <h2 class="glow-neon">WormPals Status Monitor</h2>
+
+  <div class="wormpal-panel">
+
+  
+    <div class="wormpal-card">
+      <h3 class="wormpal-name">Wormy</h3>
+      <img src="images/wormy1.png" alt="Wormy" class="wormpal-icon" />
+      <p><span class="stat-icon affection-icon"></span>Mood: <span id="wormy-mood">neutral</span></p>
+      <p><span class="stat-icon annoyance-icon"></span>Annoyance: <span id="wormy-annoyance">0</span></p>
+      <p><span class="stat-icon gift-icon"></span>Gifts: <span id="wormy-gifts">0</span></p>
+    </div>
+
+ 
+    <div class="wormpal-card">
+      <h3 class="wormpal-name">Squirmy</h3>
+      <img src="images/wormy2.png" alt="Squirmy" class="wormpal-icon" />
+      <p><span class="stat-icon affection-icon"></span>Mood: <span id="wormy-mood">neutral</span></p>
+      <p><span class="stat-icon annoyance-icon"></span>Annoyance: <span id="squirmy-annoyance">0</span></p>
+      <p><span class="stat-icon gift-icon"></span>Gifts: <span id="squirmy-gifts">0</span></p>
+    </div>
+
+ 
+    <div class="wormpal-card">
+      <h3 class="wormpal-name">Bob</h3>
+      <img src="images/wormy3.png" alt="Bob" class="wormpal-icon" />
+      <p><span class="stat-icon affection-icon"></span>Mood: <span id="wormy-mood">neutral</span></p>
+      <p><span class="stat-icon annoyance-icon"></span>Annoyance: <span id="bob-annoyance">0</span></p>
+      <p><span class="stat-icon gift-icon"></span>Gifts: <span id="bob-gifts">0</span></p>
+    </div>
+
+  </div>
+
+  <div class="input-counter">
+    Inputs: <span id="input-count">0</span>
+  </div><br>
+     <a href="/games.html" class="emoji-onion" title="git">🧅</a>
+</div>
+</div>
+ 
+  <script type="module" src="./js/wormTerminal.js"></script>
+  <script type="module" src="./js/wormPoke.js"></script>
+
+</body>
+</html>
+
