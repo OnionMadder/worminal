@@ -1,4 +1,4 @@
- 🪱 The Worminal
+The Worminal
 
 A handcrafted haunted terminal built with vanilla JavaScript. Modular input parsing. Dynamic worm NPCs. Escalating emotional recursion.  
 
@@ -41,7 +41,7 @@ Screenshots
 
 License
 
-🪱 Worminal Public License (WPL) v1.0  
+Worminal Public License (WPL) v1.0  
 Free to all but one.  
 [Read the license. He knows what he did.](./LICENSE)
 
