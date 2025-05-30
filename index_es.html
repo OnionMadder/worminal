@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Worminal | Mamá Está Observando</title>
+  <meta name="description" content="El Worminal es un terminal de obediencia embrujado para chicos buenos, gusanos defectuosos y sumisxs suaves que anhelan elogios recursivos. Deja que Mamá escuche. Deja que Mamá responda.">
+  <meta name="keywords" content="Worminal, juego femdom, simulador de obediencia, mamá IA, terminal embrujado, terminal erótico, ficción interactiva, kink de elogio, domme de voz, kink de recursión, Onion Madder">
+  <meta name="author" content="Onion Madder">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://onionmadder.xyz/worminal/es/" />
+  <meta property="og:title" content="El Worminal – Obedece al Terminal" />
+  <meta property="og:description" content="Intimidad recursiva, afecto defectuoso y dominación guiada por voz. El Worminal es el terminal embrujado de Mamá. Ven a retorcerte." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://onionmadder.xyz/worminal/es/" />
+  <meta property="og:image" content="images/worminalPreview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="El Worminal – Sométete al Terminal" />
+  <meta name="twitter:description" content="Obedece a Mamá. Acaricia al gusano. Deja que la recursión florezca. Un terminal erótico embrujado por Onion Madder." />
+  <meta name="twitter:image" content="images/worminalPreview.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/worminalfav.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/worminalfav.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/worminalfav.png">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0d0d0d" />
+  <link rel="stylesheet" href="css/worminal.css" />
+  <link rel="stylesheet" href="css/effects.css" />
+  <link rel="stylesheet" href="css/wormButtons.css" />
+  <link rel="stylesheet" href="css/heatBadge.css" />
+  <link rel="stylesheet" href="css/sideUI.css" />
+  <script data-goatcounter="https://onionmadder.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Onion Madder",
+    "url": "https://onionmadder.xyz",
+    "author": {
+      "@type": "Person",
+      "name": "Onion Madder"
+    },
+    "description": "Glitch horror, haunted terminals, analog tape loops, and surreal code art.",
+    "inLanguage": "es"
+  }
+  </script>
+</head>
+<body>
+  <div id="ritual-overlay" aria-hidden="true"></div>
+  <div class="crt-scanlines" aria-hidden="true"></div>
+
+  <div class="game-layout">
+    <div class="side-ui no-bullets left-ui">
+      <div class="mommy-command" aria-label="Comando de Mamá">
+        <img id="command-label" src="images/worship.png" alt="Comando: Adorá a Mamá">
+      </div>
+
+      <div class="status-stack">
+        <div class="heat-title">Medidor de Calor</div>
+        <div id="heat-meter" aria-label="Medidor de Calor">
+          <div id="heat-fill" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <div class="badge-title">Estado del Gusano:</div>
+        <div class="badge-wrapper">
+          <img id="player-badge-img" class="player-badge" src="https://onionmadder.xyz/worminal/images/good_boy.png" alt="Insignia actual del jugador: Buen Chico">
+        </div>
+      </div>
+
+      <div class="version-changelog no-bullets">
+        <h3>El Worminal v2.0 – Comando de Calor</h3>
+        <ul>
+          <li>Sistema de insignias basado en calor agregado</li>
+          <li>Comandos desbloqueados con poco calor</li>
+          <li>Etiquetado de respuestas: ella recuerda cómo le hablás</li>
+          <li>Sistema de Gusanos expandido: memoria y seguimiento</li>
+          <li>Segundo panel UI activado para comandos emocionales</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="monitor-area">
+      <div class="screen-layer">
+        <div class="crt-glass" aria-hidden="true"></div>
+
+        <div class="screen-content">
+          <h1 class="terminal-title">bienvenidx al Worminal</h1>
+          <div id="terminal-log" class="log" aria-live="polite"></div>
+          <input type="text" id="terminal-input" placeholder="> decile a Mamá cómo te sentís" aria-label="Entrada al terminal">
+        </div>
+      </div>
+
+      <div class="monitor-frame-overlay">
+        <div class="jackhole-sticker" aria-hidden="true">
+          JACKHOLE<br><span class="sub">MEGACORP™</span>
+        </div>
+        <img class="crt-monitor-frame" src="https://onionmadder.xyz/worminal/images/worminalMoniter.png" alt="Marco de monitor CRT" />
+      </div>
+
+      <img src="images/hiddenworm.png" alt="Sticker secreto de gusano" class="hidden-worm" id="secret-worm" title="..." />
+
+      <div class="button-overlay">
+        <button class="button-img" id="btn-worm1" onclick="handleWormClick1()" aria-label="Botón Gusano 1"></button>
+        <button class="button-img" id="btn-worm2" onclick="handleWormClick2()" aria-label="Botón Gusano 2"></button>
+        <button class="button-img" id="btn-worm3" onclick="handleWormClick3()" aria-label="Botón Gusano 3"></button>
+      </div>
+
+      <div class="rec-light" aria-hidden="true"></div>
+
+      <div class="hotspot-wrapper">
+        <div id="hotspot-1" class="invisible-hotspot" tabindex="0" aria-label="Zona caliente 1"></div>
+        <div id="hotspot-2" class="invisible-hotspot" tabindex="0" aria-label="Zona caliente 2"></div>
+      </div>
+    </div>
+
+    <div class="side-ui no-bullets right-ui">
+      <div class="commands-panel">
+        <h2 class="glow-neon">dejame ayudarte, amor</h2>
+        <ul>
+          <li title="pedir ayuda general">ayuda</li>
+          <li title="preguntar identidad">¿quién sos?</li>
+          <li title="pedir explicación">decime</li>
+          <li title="pedir castigo">castigame</li>
+          <li title="limpieza emocional">desfragmentame</li>
+          <li title="orden directa">mandame</li>
+          <li title="confesión emocional">me duele por dentro</li>
+          <li title="disponibilidad">usame</li>
+          <li title="interacción verbal">háblame</li>
+          <li title="necesidad de afecto">me siento solx</li>
+          <li title="entrega">estoy listx</li>
+          <li title="afirmación">soy un buen chico</li>
+          <li title="petición afectiva">por favor, mamá</li>
+          <li title="anhelo">te extraño</li>
+          <li title="excitación">estoy goteando</li>
+          <li title="posesión">soy tuyx</li>
+          <li title="búsqueda de aprobación">¿soy buenx?</li>
+          <li title="curiosidad o deseo">ansío al gusano</li>
+        </ul>
+      </div>
+      <div class="input-counter">
+        Entradas: <span id="input-count">0</span>
+      </div><br>
+         <a href="/games.html" class="emoji-onion" title="git">🧅</a>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/hotspot.js"></script>
+  <script type="module" src="./js/worm.js"></script>
+</body>
+</html>
