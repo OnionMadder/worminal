@@ -1,0 +1,12 @@
+export const pokeResponses = [
+  "adjusted his posture. offended.",
+  "requested clarification on the gesture.",
+  "logged the poke. color-coded.",
+  "frowned. then pretended not to care.",
+  "highlighted your action in yellow. ‘aggressive?’",
+  "sent an error report. it was blank.",
+  "twitched his eye-LED. once.",
+  "quoted regulation 7.3 on physical boundaries.",
+  "offered you a warning label. half-sincere.",
+  "blushed. but marked it ‘inappropriate input.’"
+];
