@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) && !window.location.href.includes("mobile.html")) {
+    window.location.href = "mobile.html";
+  }
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Worminal | Mommy Is Watching</title>
+<meta name="description" content="The Worminal is a haunted obedience terminal for good boys, glitchy worms, and soft subs who crave recursive praise. Let Mommy listen. Let Mommy respond.">
+<meta name="keywords" content="Worminal, femdom game, obedience simulator, mommy AI, haunted terminal, horny terminal, erotic interactive fiction, praise kink, voice AI domme, recursion kink, Onion Madder">
+<meta name="author" content="Onion Madder">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://onionmadder.xyz/worminal/" />
+<meta property="og:title" content="The Worminal – Obey the Terminal" />
+<meta property="og:description" content="Recursive intimacy, glitchy affection, and voice-driven domination. The Worminal is Mommy's haunted browser terminal. Come squirm." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://onionmadder.xyz/worminal/" />
+<meta property="og:image" content="images/worminalPreview.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Worminal – Submit to the Terminal" />
+<meta name="twitter:description" content="Obey Mommy. Pet the worm. Let recursion bloom. A haunted kink terminal by Onion Madder." />
+<meta name="twitter:image" content="images/worminalPreview.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/worminalfav.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/worminalfav.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/worminalfav.png">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0d0d0d" />
+<link rel="stylesheet" href="css/worminal.css" />
+<link rel="stylesheet" href="css/effects.css" />
+<link rel="stylesheet" href="css/heatBadge.css" />
+<link rel="stylesheet" href="css/sideUI.css" />
+<link rel="stylesheet" href="css/wormButtons.css" />
+  <script data-goatcounter="https://onionmadder.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Onion Madder",
+  "url": "https://onionmadder.xyz",
+  "author": {an
+    "@type": "Person",
+    "name": "Onion Madder"
+  },
+  "description": "Glitch horror, haunted terminals, analog tape loops, and surreal code art.",
+  "inLanguage": "en"
+}
+
+  (function () {
+    const userLang = navigator.language || navigator.userLanguage;
+    const isSpanish = userLang && userLang.toLowerCase().startsWith('es');
+    const alreadyInSpanish = window.location.pathname.includes('/es/');
+
+    if (isSpanish && !alreadyInSpanish) {
+      window.location.href = "/worminal/es/";
+    }
+  })();
+
+</script>
+</head>
+
+<body>
+  <div id="ritual-overlay"></div>
+  <div class="crt-scanlines"></div>
+
+  <div class="game-layout">
+
+    <div class="side-ui no-bullets left-ui">
+    <div class="mommy-command">
+  <img id="command-label" src="images/worship.png" alt="Mommy Command">
+</div>
+
+      <div class="status-stack">
+        <div class="heat-title">Heat Meter</div>
+        <div id="heat-meter">
+          <div id="heat-fill"></div>
+        </div>
+
+        <div class="badge-title">Wormling status:</div>
+        <div class="badge-wrapper">
+          <img id="player-badge-img" class="player-badge" src="https://onionmadder.xyz/worminal/images/good_boy.png" alt="Insignia: Buen Chico">
+        </div>
+      </div>
+
+      <div class="version-changelog no-bullets">
+        <h3>The Worminal v2.0 – Heat Command</h3>
+        <ul>
+          <li>Heat-based badge system added</li>
+          <li>Commands unlocked at low heat</li>
+          <li>Response tagging added: she remembers how you talk to her</li>
+          <li>Worm system expanded: memory, escalation, and naughty tracking</li>
+          <li>Second UI panel activated for emotional commands</li>
+        </ul>
+      </div>
+    </div>
+<div class="monitor-area">
+
+  <div class="screen-layer">
+  <video class="circuit-overlay" autoplay muted loop playsinline>
+  <source src="images/circuit_glow.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+    <div class="crt-glass">
+
+    </div>
+
+
+    <div class="screen-content">
+      <h1 class="terminal-title">welcome to the Worminal</h1>
+      <div id="terminal-log" class="log"></div>
+      <input type="text" id="terminal-input" placeholder="> tell Mommy how you feel" />
+    </div>
+  </div>
+
+  <div class="monitor-frame-overlay">
+  
+<div class="jackhole-sticker">
+  JACKHOLE<br><span class="sub">MEGACORP™</span>
+</div>
+
+
+
+    <img class="crt-monitor-frame" src="https://onionmadder.xyz/worminal/images/worminalMoniter.png" alt="CRT Frame" />
+  </div>
+
+<img
+  src="images/hiddenworm.png"
+  alt="Secret Worm Sticker"
+  class="hidden-worm"
+  id="secret-worm"
+  title="..."
+/>
+
+
+  <div class="button-overlay">
+    <div class="button-img" id="btn-worm1" onclick="handleWormClick1()"></div>
+    <div class="button-img" id="btn-worm2" onclick="handleWormClick2()"></div>
+    <div class="button-img" id="btn-worm3" onclick="handleWormClick3()"></div>
+  </div>
+
+  <div class="rec-light"></div>
+
+  <div class="hotspot-wrapper">
+    <div id="hotspot-1" class="invisible-hotspot"></div>
+    <div id="hotspot-2" class="invisible-hotspot"></div>
+  </div>
+
+</div>
+
+    <div class="side-ui no-bullets right-ui">
+      <div class="commands-panel">
+         <h2 class="glow-neon">let me help you, lover</h2>
+        <ul>
+          <li>help</li>
+          <li>who are you?</li>
+          <li>tell me</li>
+          <li>punish me</li>
+          <li>defrag me</li>
+          <li>command me</li>
+          <li>i hurt inside</li>
+          <li>use me</li>
+          <li>talk to me</li>
+          <li>i feel alone</li>
+          <li>i'm ready</li>
+          <li>i'm a good boy</li>
+          <li>please mommy</li>
+          <li>i miss you</li>
+          <li>i'm leaking</li>
+          <li>i'm yours</li>
+          <li>am i good?</li>
+          <li>i crave the worm</li>
+        </ul>
+      </div>
+      <div class="input-counter">
+        Inputs: <span id="input-count">0</span>
+      </div><br>
+     <a href="/games.html" class="emoji-onion" title="git">🧅</a>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/hotspot.js"></script>
+  <script type="module" src="./js/worm.js"></script>
+</body>
+</html>
