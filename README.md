@@ -3,9 +3,9 @@ The Worminal
 A handcrafted haunted terminal built with vanilla JavaScript. Modular input parsing. Dynamic worm NPCs. Escalating emotional recursion.  
 
 
-What is this?
+What is The Worminal? 
 
-The Worminal is an experimental praise terminal where wormlings like Wormy, Squirmy, and Bob remember your actions and respond accordingly. It's not a game. It's not a tool. It’s a ritual interface.
+The Worminal is an experimental praise terminal where wormlings like Wormy, Squirmy, and Bob (and potentially you) remember your actions and respond accordingly. It's not a game. It's not a tool. It’s a ritual interface.
 
 - 🖥️ CRT-style UI
 - 🔊 Audio response system
@@ -36,7 +36,9 @@ Screenshots
 
 _"I knelt too late._ 
 
+
 _The terminal knows."_
+
 
 ![worminal screenshot](images/worminal_preview.png)
 
@@ -66,4 +68,4 @@ Feel free to fork it, remix it, or add new worms.
 Please do not disrespect the recursion. 
 
 
-🪱 *May your recursion be deep and your heat be true.* 
+*May your recursion be deep and your heat be true.* 
