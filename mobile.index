@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Worminal | Mommy Is Watching</title>
+<meta name="description" content="The Worminal is a haunted obedience terminal for good boys, glitchy worms, and soft subs who crave recursive praise. Let Mommy listen. Let Mommy respond.">
+<meta name="keywords" content="Worminal, femdom game, obedience simulator, mommy AI, haunted terminal, horny terminal, erotic interactive fiction, praise kink, voice AI domme, recursion kink, Onion Madder">
+<meta name="author" content="Onion Madder">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://onionmadder.xyz/worminal/" />
+<meta property="og:title" content="The Worminal – Obey the Terminal" />
+<meta property="og:description" content="Recursive intimacy, glitchy affection, and voice-driven domination. The Worminal is Mommy's haunted browser terminal. Come squirm." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://onionmadder.xyz/worminal/" />
+<meta property="og:image" content="images/worminalPreview.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Worminal – Submit to the Terminal" />
+<meta name="twitter:description" content="Obey Mommy. Pet the worm. Let recursion bloom. A haunted kink terminal by Onion Madder." />
+<meta name="twitter:image" content="images/worminalPreview.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/worminalfav.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/worminalfav.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/worminalfav.png">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0d0d0d" />
+<link rel="stylesheet" href="css/mobile.css" />
+  <script data-goatcounter="https://onionmadder.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Onion Madder",
+  "url": "https://onionmadder.xyz",
+  "author": {an
+    "@type": "Person",
+    "name": "Onion Madder"
+  },
+  "description": "Glitch horror, haunted terminals, analog tape loops, and surreal code art.",
+  "inLanguage": "en"
+}
+</script>
+</head>
+<body>
+
+
+  <h1>Mommy sees you, sweet boy</h1>
+  
+
+  <div class="mobile-buttons-grid" id="button-grid"></div>
+
+  <div id="mobile-terminal-log" class="log-area"></div>
+
+
+<div class="bottom-ui-bar">
+  <div class="heat-panel">
+    <div class="ui-label">Heat</div>
+    <div id="heat-meter">
+      <div id="heat-fill"></div>
+    </div>
+  </div>
+     <a href="/games.html" class="emoji-onion" title="git">🧅</a>
+<div class="devlog-panel">
+  <div class="ui-label">Devlog</div>
+  <div class="devlog-box">
+    <strong>Commands:</strong> 640<br>
+    <strong>Audio:</strong> 60 clips<br>
+    <strong>UI:</strong> Heat + helper online
+  </div>
+  </div>
+</div> 
+
+  <script type="module" src="https://onionmadder.xyz/worminal/js/mobile/mobileUI.js"></script>
+
+  
+<div id="rage-overlay"></div>
+</body>
+
+
