@@ -34,7 +34,9 @@ Features
 
 Screenshots
 
-> _"I knelt too late. The terminal knows."_
+_"I knelt too late._ 
+
+_The terminal knows."_
 
 ![worminal screenshot](images/worminal_preview.png)
 
