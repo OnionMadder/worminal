@@ -1,1 +1,69 @@
 
+.wormpals-overlay {
+  position: absolute;
+  top: 11%;
+  left: 21%;
+  width: 60%;
+  height: 50%;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 36px;
+  filter:
+    brightness(1.1)
+    saturate(1.4)
+    contrast(1.1)
+    drop-shadow(0 0 10px #ff99ff88);
+}
+
+.wormpal-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+  filter:
+    drop-shadow(0 0 3px #ff99ff)
+    drop-shadow(0 0 6px #00ffff33);
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.wormpal-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid #ff99ff44;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #ff66cc33;
+  text-align: center;
+  width: 100%;
+  max-width: 160px;
+  font-size: 0.75rem;
+}
+
+.stat-updated {
+  animation: statPulse 0.3s ease-in-out;
+}
+
+@keyframes statPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.25); color: #ffffff; }
+  100% { transform: scale(1); }
+}
+
+#return-worm {
+  position: absolute;
+  bottom: 32%;
+  left: 15%;
+  width: 28px;
+  opacity: 0.01;
+  z-index: 99;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: wormNervousWiggle 1.2s ease-in-out infinite;
+}
+#return-worm:hover {
+  opacity: 0.2;
+  transform: scale(1.3) rotate(6deg);
+}
+
