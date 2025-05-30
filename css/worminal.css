@@ -1,1 +1,292 @@
 
+
+.circuit-overlay {
+  position: absolute;
+  top: 11%;
+  left: 21%;
+  width: 60%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 36px;
+  z-index: 1; 
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  filter:
+    brightness(1.1)
+    saturate(1.2)
+    contrast(1.05)
+    drop-shadow(0 0 10px #ff99ff55);
+}
+
+
+
+
+body, h1, h2, h3, h4, h5, h6, p, span, input, button, li, label {
+  text-shadow:
+    0 0 2px #ff66cc,
+    0 0 4px #ff99ff88,
+    0 0 6px #ff66cc44;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, #0a0010, #1b0026);
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Comfortaa', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+
+.main-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.game-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  width: 1300px;
+  max-width: none;
+  flex-wrap: nowrap;
+}
+
+
+.monitor-area {
+  position: relative;
+  width: 900px;     
+  height: 900px;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+
+
+.screen-layer {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.screen-content {
+  position: absolute;
+  top: 11%;
+  left: 21%;
+  width: 57%;
+  height: 45%;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.65);
+  border: none;
+  box-shadow:
+    inset 0 0 12px #ff33aa33,
+    0 0 24px #ff99cc22;
+  border-radius: 40px;
+  backdrop-filter: blur(2px);
+  color: #00ffff;
+  font-family: 'Comfortaa', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 2;
+  animation: pinkPulse 4s ease-in-out infinite;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  pointer-events: auto;
+}
+
+.screen-content::-webkit-scrollbar {
+  display: none;
+}
+
+.screen-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  z-index: 3;
+}
+
+.screen-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.crt-glass {
+  position: absolute;
+  top: 11%;
+  left: 18.5%;
+  width: 62%;
+  height: 52%;
+  z-index: 3;
+  pointer-events: none;
+  border-radius: 44px;
+  backdrop-filter: blur(1px);
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, transparent 70%);
+  mix-blend-mode: screen;
+  opacity: 0.12;
+}
+
+.crt-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.05) 15%,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 80%
+  );
+  opacity: 0.3;
+  mix-blend-mode: screen;
+}
+
+.crt-monitor-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+
+@keyframes pinkPulse {
+  0%, 100% {
+    box-shadow:
+      inset 0 0 12px #ff33aa33,
+      0 0 24px #ff99cc22;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow:
+      inset 0 0 20px #ff66cc66,
+      0 0 36px #ff99ff55;
+    transform: scale(1.005);
+  }
+}
+
+
+#terminal-input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 1em;
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid #ff66cc;
+  color: #00ffff;
+  padding: 0.6em 1em;
+  outline: none;
+  border-radius: 12px;
+  box-shadow:
+    0 0 10px #ff66ccaa,
+    inset 0 0 6px #99339966;
+  caret-color: #39ff14;
+  transition: all 0.2s ease-in-out;
+  text-shadow:
+    0 0 2px #00ffff,
+    0 0 4px #00ffff88;
+}
+
+#terminal-input::placeholder {
+  color: #ff99dd;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#terminal-input:focus,
+#terminal-input:hover {
+  border-color: #ff99ff;
+  box-shadow:
+    0 0 16px #ff66cc,
+    inset 0 0 8px #cc66aa88;
+}
+
+
+.jackhole-sticker {
+  position: absolute;
+  bottom: 28%;
+  left: 18%;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.61rem;
+  letter-spacing: 0.4em;
+  background: rgba(0, 0, 0, 0.4);
+  color: #ff99ff;
+  padding: 0.3em 0.6em;
+  border: 1px solid #ff66cc44;
+  border-radius: 6px;
+  box-shadow:
+    0 0 4px #ff66cc88,
+    inset 0 0 4px #ff33aa44;
+  mix-blend-mode: screen;
+  z-index: 11;
+  pointer-events: none;
+  line-height: .8;
+  text-align: center;
+}
+
+.jackhole-sticker .sub {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  margin-top: 0.1em;
+  color: #ffccff;
+}
+.emoji-onion {
+  position: absolute;
+  top: 300px;
+  right: 310px;
+  font-size: 2.9rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 4px #ff66cc) drop-shadow(0 0 8px #ff99ff);
+  z-index: 999;
+}
+
+.emoji-onion:hover {
+  transform: scale(1.2) rotate(-5deg);
+  filter: drop-shadow(0 0 6px #ff66cc) drop-shadow(0 0 12px #ff33cc);
+}
+
+@media screen and (max-width: 1500px) {
+  .game-layout {
+    transform: none !important;
+    scale: none !important;
+  }
+}
+
